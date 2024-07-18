@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div id="login-page">
+        <h2>Login <h2 class="sst">Shoes Store.Pk</h2></h2>
+        <form id="login-form">
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="login-error"></p>
+    </div>
+        
+</div>
+
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close-button" id="close-button">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+    </div>
+</div>
+
+    <!-- E-commerce Page -->
+    <div id="ecommerce-page" style="display:none;">
+        <header>
+            <nav>
+                <div class="logo">SHOES STORE.PK</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showSection('men')">Men |</a></li>
+                    <li><a href="#" onclick="showSection('women')">Women |</a></li>
+                    <li><a href="#" onclick="showSection('kids')">Kids |</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button>Search</button>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <img src="cart-icon.jpg" alt="Cart">
+                    <span id="cart-count">0</span>
+                </div>
+            </nav>
+        </header>
+        <div class="slider">
+            <div class="slides">
+                <img src="c-1.jpg" alt="Image 1">
+                <img src="c-2.jpeg" alt="Image 2">
+                <img src="c-3.jpg" alt="Image 3">
+                <img src="c-4.jpg" alt="">
+                <img src="c-5.jpg" alt="">
+                <img src="c-6.jpeg" alt="">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+        <main>
+            <div id="men" class="product-grid show">
+                <div class="product-item">
+                    <img src="p-1.webp" alt="Product 1">
+                    <h4>MENS LEATHER -S523G</h4>
+                    <p>$10.00</p>
+                    <button>Add to Cart</button>
+                    
+                </div>
+                <div class="product-item">
+                    <img src="p-2.jpg" alt="Product 2">
+                    <h4>MENS SHOES -R5TE</h4>
+                    <p>$20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-3.jpg" alt="Product 3">
+                    <h4>MENS SNIKERS - T4TEF</h4>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-4.avif" alt="Product 4">
+                    <h4>MENS JOGGERS - DD22W</h4>
+                    <p>$40.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-5.webp" alt="Nike Air Max">
+                    <h4>Nike Air Max</h4>
+                    <p>$10.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-6.webp" alt="Adidas Ultraboost">
+                    <h4>Adidas Ultraboost</h4>
+                    <p>$20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-7.webp" alt="Puma Running Shoes">
+                    <h4>Puma Running Shoes</h4>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-8.webp" alt="Reebok Classic">
+                    <h4>Reebok Classic</h4>
+                    <p>$40.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-9.webp" alt="New Balance 574">
+                    <h4>New Balance 574</h4>
+                    <p>$10.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-10.avif" alt="Under Armour HOVR">
+                    <h4>Under Armour HOVR</h4>
+                    <p>$20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-11.webp" alt="Asics Gel-Kayano">
+                    <h4>Asics Gel-Kayano</h4>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="p-12.jpg" alt="Saucony Triumph">
+                    <h4>Saucony Triumph</h4>
+                    <p>$40.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+<div id="women" class="product-grid show">               
+    <div class="product-item">
+        <img src="f-1.webp" alt="Product 1">
+        <h4>WOMENS LEATHER -S523G</h4>
+        <p>$10.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-2.jpg" alt="Product 2">
+        <h4>WOMENS SHOES -R5TE</h4>
+        <p>$20.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-3.webp" alt="Product 3">
+        <h4>WOMENS SNIKERS - T4TEF</h4>
+        <p>$30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-4.webp" alt="Product 4">
+        <h4>WOMENS JOGGERS - DD22W</h4>
+        <p>$40.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-5.jpeg" alt="Nike Air Max">
+        <h4>Nike Air Max</h4>
+        <p>$10.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-6.webp" alt="Adidas Ultraboost">
+        <h4>Adidas Ultraboost</h4>
+        <p>$20.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-7.webp" alt="Puma Running Shoes">
+        <h4>Puma Running Shoes</h4>
+        <p>$30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-8.webp" alt="Reebok Classic">
+        <h4>Reebok Classic</h4>
+        <p>$40.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-9.webp" alt="New Balance 574">
+        <h4>New Balance 574</h4>
+        <p>$10.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-10.webp" alt="Under Armour HOVR">
+        <h4>Under Armour HOVR</h4>
+        <p>$20.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-11.webp" alt="Asics Gel-Kayano">
+        <h4>Asics Gel-Kayano</h4>
+        <p>$30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-item">
+        <img src="f-12.jpg" alt="Saucony Triumph">
+        <h4>Saucony Triumph</h4>
+        <p>$40.00</p>
+        <button>Add to Cart</button>
+    </div>
+    
+</div>
+
+<div id="kids" class="product-grid show">               
+    
+                <div class="product-item">
+                    <img src="k-1.jpeg" alt="Product 1">
+                    <h4>KIDS LEATHER -S523G</h4>
+                    <p>$10.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-2.jpeg" alt="Product 2">
+                    <h4>KIDS SHOES -R5TE</h4>
+                    <p>$20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-3.webp" alt="Product 3">
+                    <h4>KIDS SNIKERS - T4TEF</h4>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-4.webp" alt="Product 4">
+                    <h4>KIDS JOGGERS - DD22W</h4>
+                    <p>$40.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-5.jpg" alt="Nike Air Max">
+                    <h4>Nike Air Max</h4>
+                    <p>$10.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-6.webp" alt="Adidas Ultraboost">
+                    <h4>Adidas Ultraboost</h4>
+                    <p>$20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-7.webp" alt="Puma Running Shoes">
+                    <h4>Puma Running Shoes</h4>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-8.jpg" alt="Reebok Classic">
+                    <h4>Reebok Classic</h4>
+                    <p>$40.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-9.webp" alt="New Balance 574">
+                    <h4>New Balance 574</h4>
+                    <p>$10.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-10.avif" alt="Under Armour HOVR">
+                    <h4>Under Armour HOVR</h4>
+                    <p>$20.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-11.png" alt="Asics Gel-Kayano">
+                    <h4>Asics Gel-Kayano</h4>
+                    <p>$30.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="k-12.avif" alt="Saucony Triumph">
+                    <h4>Saucony Triumph</h4>
+                    <p>$40.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>Shoes Store.pk</h4>
+                    <p>Your one-stop shop for the best shoes in town. Quality and comfort guaranteed.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: rajaabdulmoiz211@gmail.com</p>
+                    <p>Phone: +92 123 456 7890</p>
+                    <p>Address: -------------------------</p>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shoes Store.pk. All rights reserved.</p>
+            </div>
+        </footer>
+        
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
